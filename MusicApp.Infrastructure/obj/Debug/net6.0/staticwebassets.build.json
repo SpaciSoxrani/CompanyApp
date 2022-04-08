@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XES7PfBeiXD+bYxg6CuZzceGRAPCYzgwb4Sag9giAQo=",
+  "Hash": "c5fjStpXfYNOb/Da8I4cG08cGYy+4eFj+W4pu3SgtwA=",
   "Source": "MusicApp.Infrastructure",
   "BasePath": "_content/MusicApp.Infrastructure",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "MusicApp.Core",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     }
   ],
