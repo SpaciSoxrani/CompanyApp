@@ -1,11 +1,34 @@
 {
   "Version": 1,
-  "Hash": "lNV3wolDFxVF5GoLjL0JoQKvtHuA4TrRbEOPJOajKMI=",
+  "Hash": "Y4e3q64ybEgLqiDvWwJjQ/iHY4lXyYSKczm/7BC/mxI=",
   "Source": "MusicApp",
   "BasePath": "_content/MusicApp",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp.Core\\MusicApp.Core.csproj",
+      "Version": 2,
+      "Source": "MusicApp.Core",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    },
+    {
+      "Identity": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp.Infrastructure\\MusicApp.Infrastructure.csproj",
+      "Version": 2,
+      "Source": "MusicApp.Infrastructure",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "MusicApp\\wwwroot",
