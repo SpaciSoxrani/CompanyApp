@@ -1,6 +1,9 @@
+using MusicApp.Infrastructure.Database;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddDbContext<MusicAppContext>();
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
