@@ -5,8 +5,8 @@ namespace MusicApp.Infrastructure.Database.Repositories;
 public interface IRepository<T> where T : BaseEntity
 {
     IEnumerable<T?> GetAll();
-    T? GetById(Guid id);
+    T? GetById(string id);
     void Insert(T? entity);
     void Update(T entity);
-    void Delete(Guid id);
+    void Delete(string id);
 }

@@ -33,20 +33,20 @@ namespace MusicApp.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public MusicEvent GetMusicEventById(Guid id) => musicEventRepository.GetById(id);
+        public MusicEvent GetMusicEventById(string id) => musicEventRepository.GetById(id);
 
         [HttpPost]
         [AllowAnonymous]
         public void AddMusicEvent([FromBody] MusicEvent musicEvent) => musicEventRepository.Insert(musicEvent);
         
-        [HttpPost]
+        [HttpPut]
         [AllowAnonymous]
         public void UpdateMusicEvent([FromBody] MusicEvent musicEvent) => musicEventRepository.Update(musicEvent);
 
         [HttpDelete]
         [Route("{id}")]
         [AllowAnonymous]
-        public void DeleteMusicEvent(Guid id) => musicEventRepository.Delete(id);
+        public void DeleteMusicEvent(string id) => musicEventRepository.Delete(id);
 
     }
 }

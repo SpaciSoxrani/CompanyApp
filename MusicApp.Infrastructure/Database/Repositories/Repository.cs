@@ -20,7 +20,7 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
         return entities.AsEnumerable();
     }
 
-    public T? GetById(Guid id)
+    public T? GetById(string id)
     {
         return entities.SingleOrDefault(s => s.Id == id);
     }
@@ -39,7 +39,7 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
         context.SaveChanges();
     }
     
-    public void Delete(Guid id)
+    public void Delete(string id)
     {
         if (id == null) throw new ArgumentNullException("entity");
 

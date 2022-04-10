@@ -36,9 +36,9 @@ namespace MusicApp.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public EventPlace GetEventPlace(Guid id) => eventPlaceRepository.GetById(id);
+        public EventPlace GetEventPlace(string id) => eventPlaceRepository.GetById(id);
 
-        [HttpPost]
+        [HttpPut]
         [AllowAnonymous]
         public void UpdateEventPlace([FromBody] EventPlace eventPlace) => eventPlaceRepository.Update(eventPlace);
         
@@ -49,7 +49,7 @@ namespace MusicApp.Controllers
         [HttpDelete]
         [Route("{id}")]
         [AllowAnonymous]
-        public void DeleteEventPlace(Guid id) => eventPlaceRepository.Delete(id);
+        public void DeleteEventPlace(string id) => eventPlaceRepository.Delete(id);
         
     }
 }
