@@ -2,12 +2,15 @@ using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using MusicApp.Extensions;
 using MusicApp.Infrastructure.Database;
+using MusicApp.Infrastructure.Database.Repositories;
+using NuGet.Protocol.Core.Types;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<MusicAppContext>();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
 

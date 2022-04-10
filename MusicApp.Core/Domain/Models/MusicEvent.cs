@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MusicApp.Core.Domain.Models;
 
-public class MusicEvent
+public class MusicEvent : BaseEntity
 {
     // public MusicEvent(long id, string? name, string? genre, DateTime releaseDate, decimal price, bool isComplete, EventPlace eventPlace)
     // {
