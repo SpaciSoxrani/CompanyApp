@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MusicApp.Core.Domain.Models;
 using MusicApp.Infrastructure.Database;
+using MusicApp.Infrastructure.Database.Repositories;
 
 namespace MusicApp.Controllers
 {
@@ -17,93 +19,33 @@ namespace MusicApp.Controllers
     {
         private readonly MusicAppContext _context;
 
+        private IRepository<MusicEvent> musicEventRepository;
+        public MusicEventController(IRepository<MusicEvent> musicEventRepository)
+        { this.musicEventRepository = musicEventRepository;}
         public MusicEventController(MusicAppContext context)
         {
             _context = context;
         }
-
-        // GET: api/MusicEvent
+        
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<MusicEvent>>> GetMusEvent()
-        {
-            return await _context.MusEvent.ToListAsync();
-        }
+        public IEnumerable<MusicEvent> GetMusicEvents() => musicEventRepository.GetAll();
 
-        // GET: api/MusicEvent/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<MusicEvent>> GetMusicEvent(long id)
-        {
-            var musicEvent = await _context.MusEvent.FindAsync(id);
+        [HttpGet]
+        [Route("{id}")]
+        public MusicEvent GetMusicEventById(string id) => musicEventRepository.GetById(id);
 
-            if (musicEvent == null)
-            {
-                return NotFound();
-            }
-
-            return musicEvent;
-        }
-
-        // PUT: api/MusicEvent/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutMusicEvent(long id, MusicEvent musicEvent)
-        {
-            if (id != musicEvent.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(musicEvent).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MusicEventExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/MusicEvent
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<MusicEvent>> PostMusicEvent(MusicEvent musicEvent)
-        {
-            _context.MusEvent.Add(musicEvent);
-            await _context.SaveChangesAsync();
+        [AllowAnonymous]
+        public void AddMusicEvent([FromBody] MusicEvent musicEvent) => musicEventRepository.Insert(musicEvent);
+        
+        [HttpPost]
+        [AllowAnonymous]
+        public void UpdateMusicEvent([FromBody] MusicEvent musicEvent) => musicEventRepository.Update(musicEvent);
 
-            return CreatedAtAction("GetMusicEvent", new { id = musicEvent.Id }, musicEvent);
-        }
+        [HttpDelete]
+        [Route("{id}")]
+        [AllowAnonymous]
+        public void DeleteMusicEvent(string id) => musicEventRepository.Delete(id);
 
-        // DELETE: api/MusicEvent/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteMusicEvent(long id)
-        {
-            var musicEvent = await _context.MusEvent.FindAsync(id);
-            if (musicEvent == null)
-            {
-                return NotFound();
-            }
-
-            _context.MusEvent.Remove(musicEvent);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool MusicEventExists(long id)
-        {
-            return _context.MusEvent.Any(e => e.Id == id);
-        }
     }
 }
