@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MusicApp.Core.Domain.Models;
 using MusicApp.Infrastructure.Database;
+using MusicApp.Infrastructure.Database.Repositories;
 
 namespace MusicApp.Controllers
 {
@@ -16,6 +18,10 @@ namespace MusicApp.Controllers
     public class EventPlaceController : ControllerBase
     {
         private readonly MusicAppContext _context;
+        
+        private IRepository<EventPlace> eventPlaceRepository;
+        public EventPlaceController(IRepository<EventPlace> eventPlaceRepository)
+        { this.eventPlaceRepository = eventPlaceRepository;}
 
         public EventPlaceController(MusicAppContext context)
         {
@@ -23,97 +29,115 @@ namespace MusicApp.Controllers
         }
 
         // GET: api/EventPlace
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<EventPlace>>> GetEventPlace()
-        {
-            return await _context.EventPlace.ToListAsync();
-        }
+        //[HttpGet]
+        // public async Task<ActionResult<IEnumerable<EventPlace>>> GetEventPlace()
+        // {
+        //     return await _context.EventPlace.ToListAsync();
+        // }
+        [HttpGet] 
+        public IEnumerable<EventPlace> GetEventPlace() => eventPlaceRepository.GetAll();
 
         // GET: api/EventPlace/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<EventPlace>> GetEventPlace(string id)
-        {
-            var eventPlace = await _context.EventPlace.FindAsync(id);
-
-            if (eventPlace == null)
-            {
-                return NotFound();
-            }
-
-            return eventPlace;
-        }
+        // [HttpGet("{id}")]
+        // public async Task<ActionResult<EventPlace>> GetEventPlace(string id)
+        // {
+        //     var eventPlace = await _context.EventPlace.FindAsync(id);
+        //
+        //     if (eventPlace == null)
+        //     {
+        //         return NotFound();
+        //     }
+        //
+        //     return eventPlace;
+        // }
+        
+        [HttpGet]
+        [Route("{id}")]
+        public EventPlace GetEventPlace(string id) => eventPlaceRepository.GetById(id);
 
         // PUT: api/EventPlace/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutEventPlace(string id, EventPlace eventPlace)
-        {
-            if (id != eventPlace.Id)
-            {
-                return BadRequest();
-            }
+        // [HttpPut("{id}")]
+        // public async Task<IActionResult> PutEventPlace(string id, EventPlace eventPlace)
+        // {
+        //     if (id != eventPlace.Id)
+        //     {
+        //         return BadRequest();
+        //     }
+        //
+        //     _context.Entry(eventPlace).State = EntityState.Modified;
+        //
+        //     try
+        //     {
+        //         await _context.SaveChangesAsync();
+        //     }
+        //     catch (DbUpdateConcurrencyException)
+        //     {
+        //         if (!EventPlaceExists(id))
+        //         {
+        //             return NotFound();
+        //         }
+        //         else
+        //         {
+        //             throw;
+        //         }
+        //     }
+        //
+        //     return NoContent();
+        // }
+        
+        [HttpPost]
+        [AllowAnonymous]
+        public void UpdateEventPlace([FromBody] EventPlace eventPlace) => eventPlaceRepository.Update(eventPlace);
+        
+        [HttpPost]
+        [AllowAnonymous]
+        public void AddEventPlace([FromBody] EventPlace eventPlace) => eventPlaceRepository.Insert(eventPlace);
 
-            _context.Entry(eventPlace).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!EventPlaceExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
+        [HttpDelete]
+        [Route("{id}")]
+        [AllowAnonymous]
+        public void DeleteEventPlace(string id) => eventPlaceRepository.Delete(id);
         // POST: api/EventPlace
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<EventPlace>> PostEventPlace(EventPlace eventPlace)
-        {
-            _context.EventPlace.Add(eventPlace);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (EventPlaceExists(eventPlace.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtAction("GetEventPlace", new { id = eventPlace.Id }, eventPlace);
-        }
-
-        // DELETE: api/EventPlace/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteEventPlace(string id)
-        {
-            var eventPlace = await _context.EventPlace.FindAsync(id);
-            if (eventPlace == null)
-            {
-                return NotFound();
-            }
-
-            _context.EventPlace.Remove(eventPlace);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
+        // [HttpPost]
+        // public async Task<ActionResult<EventPlace>> PostEventPlace(EventPlace eventPlace)
+        // {
+        //     _context.EventPlace.Add(eventPlace);
+        //     try
+        //     {
+        //         await _context.SaveChangesAsync();
+        //     }
+        //     catch (DbUpdateException)
+        //     {
+        //         if (EventPlaceExists(eventPlace.Id))
+        //         {
+        //             return Conflict();
+        //         }
+        //         else
+        //         {
+        //             throw;
+        //         }
+        //     }
+        //
+        //     return CreatedAtAction("GetEventPlace", new { id = eventPlace.Id }, eventPlace);
+        // }
+        //
+        // // DELETE: api/EventPlace/5
+        // [HttpDelete("{id}")]
+        // public async Task<IActionResult> DeleteEventPlace(string id)
+        // {
+        //     var eventPlace = await _context.EventPlace.FindAsync(id);
+        //     if (eventPlace == null)
+        //     {
+        //         return NotFound();
+        //     }
+        //
+        //     _context.EventPlace.Remove(eventPlace);
+        //     await _context.SaveChangesAsync();
+        //
+        //     return NoContent();
+        // }
 
         private bool EventPlaceExists(string id)
         {
