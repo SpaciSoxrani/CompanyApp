@@ -20,10 +20,11 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
         return entities.AsEnumerable();
     }
 
-    public T? GetById(string id)
+    public T? GetById(Guid id)
     {
         return entities.SingleOrDefault(s => s.Id == id);
     }
+
 
     public void Insert(T? entity)
     {
@@ -37,8 +38,8 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
         if (entity == null) throw new ArgumentNullException("entity");
         context.SaveChanges();
     }
-
-    public void Delete(string id)
+    
+    public void Delete(Guid id)
     {
         if (id == null) throw new ArgumentNullException("entity");
 

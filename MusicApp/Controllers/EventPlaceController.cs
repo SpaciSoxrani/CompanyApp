@@ -20,20 +20,23 @@ namespace MusicApp.Controllers
         private readonly MusicAppContext _context;
         
         private IRepository<EventPlace> eventPlaceRepository;
-        public EventPlaceController(IRepository<EventPlace> eventPlaceRepository)
-        { this.eventPlaceRepository = eventPlaceRepository;}
 
-        public EventPlaceController(MusicAppContext context)
+        public EventPlaceController(IRepository<EventPlace> eventPlaceRepository)
         {
-            _context = context;
+            this.eventPlaceRepository = eventPlaceRepository;
         }
+
+        // public EventPlaceController(MusicAppContext context)
+        // {
+        //     _context = context;
+        // }
         
         [HttpGet] 
         public IEnumerable<EventPlace> GetEventPlace() => eventPlaceRepository.GetAll();
 
         [HttpGet]
         [Route("{id}")]
-        public EventPlace GetEventPlace(string id) => eventPlaceRepository.GetById(id);
+        public EventPlace GetEventPlace(Guid id) => eventPlaceRepository.GetById(id);
 
         [HttpPost]
         [AllowAnonymous]
@@ -46,7 +49,7 @@ namespace MusicApp.Controllers
         [HttpDelete]
         [Route("{id}")]
         [AllowAnonymous]
-        public void DeleteEventPlace(string id) => eventPlaceRepository.Delete(id);
+        public void DeleteEventPlace(Guid id) => eventPlaceRepository.Delete(id);
         
     }
 }

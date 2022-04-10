@@ -17,22 +17,23 @@ namespace MusicApp.Controllers
     [ApiController]
     public class MusicEventController : ControllerBase
     {
-        private readonly MusicAppContext _context;
-
         private IRepository<MusicEvent> musicEventRepository;
+
         public MusicEventController(IRepository<MusicEvent> musicEventRepository)
-        { this.musicEventRepository = musicEventRepository;}
-        public MusicEventController(MusicAppContext context)
         {
-            _context = context;
+            this.musicEventRepository = musicEventRepository;
         }
+        // public MusicEventController(MusicAppContext context)
+        // {
+        //     _context = context;
+        // }
         
         [HttpGet]
         public IEnumerable<MusicEvent> GetMusicEvents() => musicEventRepository.GetAll();
 
         [HttpGet]
         [Route("{id}")]
-        public MusicEvent GetMusicEventById(string id) => musicEventRepository.GetById(id);
+        public MusicEvent GetMusicEventById(Guid id) => musicEventRepository.GetById(id);
 
         [HttpPost]
         [AllowAnonymous]
@@ -45,7 +46,7 @@ namespace MusicApp.Controllers
         [HttpDelete]
         [Route("{id}")]
         [AllowAnonymous]
-        public void DeleteMusicEvent(string id) => musicEventRepository.Delete(id);
+        public void DeleteMusicEvent(Guid id) => musicEventRepository.Delete(id);
 
     }
 }
