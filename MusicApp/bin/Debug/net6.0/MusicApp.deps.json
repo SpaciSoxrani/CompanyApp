@@ -18,6 +18,17 @@
           "MusicApp.dll": {}
         }
       },
+      "Autofac/6.3.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "7.0.0-preview.2.22152.2"
+        },
+        "runtime": {
+          "lib/net5.0/Autofac.dll": {
+            "assemblyVersion": "6.3.0.0",
+            "fileVersion": "6.3.0.0"
+          }
+        }
+      },
       "Azure.Core/1.6.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
@@ -2628,6 +2639,7 @@
       },
       "MusicApp.Infrastructure/1.0.0": {
         "dependencies": {
+          "Autofac": "6.3.0",
           "Microsoft.EntityFrameworkCore.Abstractions": "7.0.0-preview.2.22153.1",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.0-preview.2.22153.1",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.0-preview.2.22153.1",
@@ -2636,6 +2648,7 @@
           "MusicApp.Core": "1.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0-preview.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
+          "NuGet.Protocol": "5.11.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -2649,6 +2662,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Autofac/6.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gO4bli0N8tDnBHzbYktcnbXlmN6T+IT5W+FUGgCUaM6pwwHXIxOPoUGvfGum7sZpJJgfQNgjFFv80ZPuARgRdA==",
+      "path": "autofac/6.3.0",
+      "hashPath": "autofac.6.3.0.nupkg.sha512"
     },
     "Azure.Core/1.6.0": {
       "type": "package",

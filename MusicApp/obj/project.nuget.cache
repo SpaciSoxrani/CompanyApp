@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "wfQH/scjfmAVQkg3+BqNwgM795OL+2n7n9sdAUQdNaeXG2aeZjjxSw7H3xSfqQPvTLk1M7DYAQ2oSj7MvfcTSQ==",
+  "dgSpecHash": "BtTZKAuwvWorjjsAS1P8VLsyZx/hMcBFuNckyqngr0u1G241wH9Pv6mxD2CSAWruzJDzJHjOJGWiZ5g8EmWdcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp\\MusicApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\I553132\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

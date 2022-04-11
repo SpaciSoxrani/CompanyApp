@@ -103,6 +103,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",
               "version": "[7.0.0-preview.2.22153.1, )"
@@ -142,6 +146,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
               "target": "Package",
               "version": "[1.1.0, )"
+            },
+            "NuGet.Protocol": {
+              "target": "Package",
+              "version": "[5.11.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

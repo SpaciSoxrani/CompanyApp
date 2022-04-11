@@ -26,12 +26,6 @@ C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\obj\Debug\net6.0\Music
 C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\obj\Debug\net6.0\ref\MusicApp.dll
 C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\obj\Debug\net6.0\MusicApp.pdb
 C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\obj\Debug\net6.0\MusicApp.genruntimeconfig.cache
-C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\MusicApp.Core.deps.json
-C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\MusicApp.Core.runtimeconfig.json
-C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\MusicApp.Core.exe
-C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\MusicApp.Infrastructure.deps.json
-C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\MusicApp.Infrastructure.runtimeconfig.json
-C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\MusicApp.Infrastructure.exe
 C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -315,3 +309,4 @@ C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\zh-Ha
 C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\I553132\RiderProjects\CleanArchitecture\MusicApp\bin\Debug\net6.0\Autofac.dll
