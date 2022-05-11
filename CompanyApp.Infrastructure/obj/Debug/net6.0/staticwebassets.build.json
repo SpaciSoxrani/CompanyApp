@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "zb7mhYDimzd3rsz9MeKa+x2YqviTzkm9tCVPuM2BuG0=",
+  "Source": "CompanyApp.Infrastructure",
+  "BasePath": "_content/CompanyApp.Infrastructure",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Core\\CompanyApp.Core.csproj",
+      "Version": 2,
+      "Source": "CompanyApp.Core",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

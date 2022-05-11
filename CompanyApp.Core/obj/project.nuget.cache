@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "YNhFemBNTASM4zKreOIlHQlpdlG/8QLL08tI84gEPRRttw179FXDeB63gHBZNq01X4j8jiJYCiOdNfvkHPbRrA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Core\\CompanyApp.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\I553132\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+@{
+    var titles = HtmlParser.HtmlAgilityPackParse();
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music app</title>
+</head>
+<body>
+    <p>Hello world!</p>
+    
+    <tbody>
+        @foreach (var title in titles)
+        {
+            <tr><td>@title</td></tr>
+        }
+    </tbody>
+
+</body>
+</html>

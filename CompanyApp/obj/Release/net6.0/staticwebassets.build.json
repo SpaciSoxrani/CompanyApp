@@ -1,0 +1,94 @@
+{
+  "Version": 1,
+  "Hash": "20u7WXcbrffIrN+cTUeMj/MSAk7EysF4K6gpz+2cAw8=",
+  "Source": "MusicApp",
+  "BasePath": "_content/MusicApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp.Core\\MusicApp.Core.csproj",
+      "Version": 2,
+      "Source": "MusicApp.Core",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    },
+    {
+      "Identity": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp.Infrastructure\\MusicApp.Infrastructure.csproj",
+      "Version": 2,
+      "Source": "MusicApp.Infrastructure",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MusicApp\\wwwroot",
+      "Source": "MusicApp",
+      "ContentRoot": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp\\wwwroot\\",
+      "BasePath": "_content/MusicApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp\\wwwroot\\css\\site.css",
+      "SourceId": "MusicApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp\\wwwroot\\",
+      "BasePath": "_content/MusicApp",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp\\wwwroot\\Index.html",
+      "SourceId": "MusicApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp\\wwwroot\\",
+      "BasePath": "_content/MusicApp",
+      "RelativePath": "Index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Index.html"
+    },
+    {
+      "Identity": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp\\wwwroot\\js\\site.js",
+      "SourceId": "MusicApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\MusicApp\\wwwroot\\",
+      "BasePath": "_content/MusicApp",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicApp.Core", "MusicApp.Core\MusicApp.Core.csproj", "{055F8C4F-8B9C-482B-BB19-C6C756C6F331}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyApp.Core", "CompanyApp.Core\CompanyApp.Core.csproj", "{055F8C4F-8B9C-482B-BB19-C6C756C6F331}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicApp.Infrastructure", "MusicApp.Infrastructure\MusicApp.Infrastructure.csproj", "{AE9502C7-AA6E-40A0-8E71-A867D87FD3BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyApp.Infrastructure", "CompanyApp.Infrastructure\CompanyApp.Infrastructure.csproj", "{AE9502C7-AA6E-40A0-8E71-A867D87FD3BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicApp", "MusicApp\MusicApp.csproj", "{C8A13B0E-D69F-4BC7-A166-355EC6E077B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyApp", "CompanyApp\CompanyApp.csproj", "{C8A13B0E-D69F-4BC7-A166-355EC6E077B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
