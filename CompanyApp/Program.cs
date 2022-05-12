@@ -13,10 +13,11 @@ using NuGet.Protocol.Core.Types;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<MusicAppContext>();
+builder.Services.AddDbContext<CompanyAppContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped(typeof(IParserRiaNewsService), typeof(ParserRiaNewsService));
+builder.Services.AddScoped(typeof(IClassificationService), typeof(TextClassificationService));
 	
 //builder.Services.AddTransient<IParserRiaNewsService, ParserRiaNewsService>();
 
@@ -28,9 +29,10 @@ using (var serviceScope = app.Services.CreateScope())
     var services = serviceScope.ServiceProvider;
 
     var myDependency = services.GetRequiredService<IParserRiaNewsService>();
-    var repo = services.GetRequiredService<IRepository<MainTitle>>();
+    var classificationService = services.GetRequiredService<IClassificationService>();
     
-    myDependency.SaveAllAsync();
+    //myDependency.SaveAllAsync();
+    classificationService.ClassificationTexts();
 }
 
 

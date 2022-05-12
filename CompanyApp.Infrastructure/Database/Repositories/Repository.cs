@@ -7,11 +7,11 @@ namespace CompanyApp.Infrastructure.Database.Repositories;
 
 public class Repository<T> : IRepository<T> where T : BaseEntity
 {
-    protected readonly MusicAppContext context;
+    protected readonly CompanyAppContext context;
     private DbSet<T> entities;
     string _errorMessage = string.Empty;
     
-    public Repository(MusicAppContext context)
+    public Repository(CompanyAppContext context)
     {
         this.context = context;
         entities = context.Set<T>();

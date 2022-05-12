@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "N6c+1eGcXXaZqEA8njCx5HUsQVUyBWO83sJKJcPhiuUnlxL9AiF3SPJy8bEbIbcF1wUKlPXFNCUkZ8skXeLa1g==",
+  "dgSpecHash": "+SJVX27/FtlBZLyH2EehlUzwcDzEBU6Tm50+s+Qd1HJvIaQjir486y5uEM2MsJJhp5dEFGzvZbhkt1ydMCZs0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp\\CompanyApp.csproj",
   "expectedPackageFiles": [
@@ -67,6 +67,9 @@
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.8.0\\microsoft.identitymodel.protocols.6.8.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.8.0\\microsoft.identitymodel.protocols.openidconnect.6.8.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\microsoft.ml\\1.7.1\\microsoft.ml.1.7.1.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\microsoft.ml.cpumath\\1.7.1\\microsoft.ml.cpumath.1.7.1.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\microsoft.ml.dataview\\1.7.1\\microsoft.ml.dataview.1.7.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.net.stringtools\\1.0.0\\microsoft.net.stringtools.1.0.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
@@ -122,6 +125,7 @@
     "C:\\Users\\I553132\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.collections.immutable\\7.0.0-preview.2.22152.2\\system.collections.immutable.7.0.0-preview.2.22152.2.nupkg.sha512",
@@ -194,6 +198,7 @@
     "C:\\Users\\I553132\\.nuget\\packages\\system.text.json\\7.0.0-preview.2.22152.2\\system.text.json.7.0.0-preview.2.22152.2.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.threading.tasks.dataflow\\4.9.0\\system.threading.tasks.dataflow.4.9.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",

@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CompanyApp.Infrastructure.Migrations
 {
-    [DbContext(typeof(MusicAppContext))]
+    [DbContext(typeof(CompanyAppContext))]
     partial class MusicAppContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

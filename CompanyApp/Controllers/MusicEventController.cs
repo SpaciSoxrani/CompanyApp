@@ -24,7 +24,7 @@ namespace CompanyApp.Controllers
         {
             this.musicEventRepository = musicEventRepository;
         }
-        // public MusicEventController(MusicAppContext context)
+        // public MusicEventController(CompanyAppContext context)
         // {
         //     _context = context;
         // }

@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CompanyApp.Infrastructure.Migrations
 {
-    [DbContext(typeof(MusicAppContext))]
+    [DbContext(typeof(CompanyAppContext))]
     [Migration("20220408093834_InitialCreate")]
     partial class InitialCreate
     {

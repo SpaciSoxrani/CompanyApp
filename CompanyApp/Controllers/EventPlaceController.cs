@@ -18,7 +18,7 @@ namespace CompanyApp.Controllers
     [ApiController]
     public class EventPlaceController : ControllerBase
     {
-        private readonly MusicAppContext _context;
+        private readonly CompanyAppContext _context;
         
         private IRepository<EventPlace> eventPlaceRepository;
 
@@ -27,7 +27,7 @@ namespace CompanyApp.Controllers
             this.eventPlaceRepository = eventPlaceRepository;
         }
 
-        // public EventPlaceController(MusicAppContext context)
+        // public EventPlaceController(CompanyAppContext context)
         // {
         //     _context = context;
         // }

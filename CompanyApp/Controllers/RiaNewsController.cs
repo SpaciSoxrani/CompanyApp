@@ -20,7 +20,7 @@ namespace CompanyApp.Controllers
     [ApiController]
     public class RiaNewsApi : ControllerBase
     {
-        private readonly MusicAppContext _context;
+        private readonly CompanyAppContext _context;
         private IRepository<MainTitle> riaNewsRepository;
 
         public RiaNewsApi(IRepository<MainTitle> riaNewsRepository)
