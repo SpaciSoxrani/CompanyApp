@@ -21,6 +21,7 @@ builder.Services.AddScoped(typeof(IClassificationService), typeof(TextClassifica
 	
 //builder.Services.AddTransient<IParserRiaNewsService, ParserRiaNewsService>();
 
+
 var app = builder.Build();
 
 //вызов сервиса парсера РИА новостей
@@ -29,10 +30,9 @@ using (var serviceScope = app.Services.CreateScope())
     var services = serviceScope.ServiceProvider;
 
     var myDependency = services.GetRequiredService<IParserRiaNewsService>();
-    var classificationService = services.GetRequiredService<IClassificationService>();
+    //var classificationService = services.GetRequiredService<IClassificationService>();
     
-    //myDependency.SaveAllAsync();
-    classificationService.ClassificationTexts();
+    myDependency.SaveAllAsync();
 }
 
 

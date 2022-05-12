@@ -16,15 +16,15 @@ public class HtmlParser
         List<string> hrefTags = new List<string>();
         List<MainTitle> riaNewsMainTitles = new List<MainTitle>();
 
-        foreach (HtmlNode link in htmlDoc.DocumentNode
+        foreach (HtmlNode text in htmlDoc.DocumentNode
                      .SelectNodes("//div[contains(@class, 'cell-list__list')]/div/a"))
         {
-            if(link.InnerText != null)
+            if(text.InnerText != null)
             {
-                Console.WriteLine(link.InnerText);
-                hrefTags.Add(link.InnerText);
+                //Console.WriteLine(link.InnerText);
+                hrefTags.Add(text.InnerText);
                 var mainTitle = new MainTitle();
-                mainTitle.Name = link.InnerText;
+                mainTitle.Name = text.InnerText;
                 riaNewsMainTitles.Add(mainTitle);
             }
         }

@@ -2,5 +2,5 @@ namespace MusicApp;
 
 public interface IClassificationService
 {
-    void ClassificationTexts();
+    void ClassificationTexts(string text);
 }
