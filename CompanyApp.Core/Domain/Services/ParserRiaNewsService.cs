@@ -6,10 +6,10 @@ namespace MusicApp;
 
 public sealed class ParserRiaNewsService : IParserRiaNewsService
 {
-    private readonly IClassificationService classificationService;
+    private readonly IClassificationService<MainTitle> classificationService;
     private IRepository<MainTitle> riaNewsRepository;
     private readonly ILogger<ParserRiaNewsService> logger;
-    public ParserRiaNewsService(IClassificationService classificationService,
+    public ParserRiaNewsService(IClassificationService<MainTitle> classificationService,
         IRepository<MainTitle> riaNewsRepository, ILogger<ParserRiaNewsService> logger)
     {
         this.classificationService = classificationService;
@@ -30,8 +30,11 @@ public sealed class ParserRiaNewsService : IParserRiaNewsService
         {
             if(!existNewsMainTitle.Any(s => s.Name.Equals(mainTitle.Name)))
             {
-                riaNewsRepository.Insert(mainTitle);
-                classificationService.ClassificationTexts(mainTitle.Name);
+                var prediction=classificationService.ClassificationTexts(mainTitle);
+                var newMainTitle = new MainTitle(mainTitle.Name,
+                    Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative", prediction.Probability);
+                riaNewsRepository.Insert(newMainTitle);
+
             }
         }
     }

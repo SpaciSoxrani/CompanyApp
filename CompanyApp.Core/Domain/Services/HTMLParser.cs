@@ -23,8 +23,8 @@ public class HtmlParser
             {
                 //Console.WriteLine(link.InnerText);
                 hrefTags.Add(text.InnerText);
-                var mainTitle = new MainTitle();
-                mainTitle.Name = text.InnerText;
+                var mainTitle = new MainTitle(text.InnerText, null, 0);
+               
                 riaNewsMainTitles.Add(mainTitle);
             }
         }

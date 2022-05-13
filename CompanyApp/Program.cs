@@ -17,10 +17,9 @@ builder.Services.AddDbContext<CompanyAppContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped(typeof(IParserRiaNewsService), typeof(ParserRiaNewsService));
-builder.Services.AddScoped(typeof(IClassificationService), typeof(TextClassificationService));
+builder.Services.AddScoped(typeof(IClassificationService<>), typeof(TextClassificationService<>));
 	
 //builder.Services.AddTransient<IParserRiaNewsService, ParserRiaNewsService>();
-
 
 var app = builder.Build();
 

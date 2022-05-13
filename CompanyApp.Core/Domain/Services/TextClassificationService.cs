@@ -1,3 +1,4 @@
+using CompanyApp.Core.Domain.Models;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Transforms;
@@ -5,14 +6,14 @@ using MusicApp;
 
 namespace CompanyApp.Core;
 
-public class TextClassificationService : IClassificationService
+public class TextClassificationService<T> : IClassificationService<T> where T : BaseEntity
 {
     private static MLContext _mlContext;
     private static string _appPath => Path.GetDirectoryName(Environment.GetCommandLineArgs()[0]);
     private static string _modelPath => Path.Combine(
         @"C:\Users\I553132\RiderProjects\CleanArchitecture\CompanyApp.Core\TextClassification\Model\model.zip");
 
-    private static void UseModelWithSingleItem(MLContext mlContext, ITransformer model, string statement)
+    private static IssuePrediction UseModelWithSingleItem(MLContext mlContext, ITransformer model, T mainTitle)
     {
         var predictionFunction = mlContext.Model.CreatePredictionEngine<CompanyText, IssuePrediction>(model);
 
@@ -20,29 +21,34 @@ public class TextClassificationService : IClassificationService
             //var newSample = Console.ReadLine();
             CompanyText sampleStatement = new CompanyText
             {
-                SentimentText = statement
+                SentimentText = mainTitle.Name
             };
 
             var resultPrediction = predictionFunction.Predict(sampleStatement);
 
-            Console.WriteLine();
-            Console.WriteLine("=============== Prediction Test of model with a single sample and test dataset ===============");
+            // Console.WriteLine();
+            // Console.WriteLine("=============== Prediction Test of model with a single sample and test dataset ===============");
+            //
+            // Console.WriteLine();
+            // Console.WriteLine($"Prediction: {(Convert.ToBoolean(resultPrediction.Prediction) ? "Positive" : "Negative")} | Probability: {resultPrediction.Probability} ");
+            //
+            // Console.WriteLine("=============== End of Predictions ===============");
+            // Console.WriteLine();
+            
+            //mainTitle.Prediction = Convert.ToBoolean(resultPrediction.Prediction) ? "Positive" : "Negative";
+            //mainTitle.Probability = resultPrediction.Probability;
 
-            Console.WriteLine();
-            Console.WriteLine($"Prediction: {(Convert.ToBoolean(resultPrediction.Prediction) ? "Positive" : "Negative")} | Probability: {resultPrediction.Probability} ");
-
-            Console.WriteLine("=============== End of Predictions ===============");
-            Console.WriteLine();
-        
+            return resultPrediction;
     }
 
-    public void ClassificationTexts(string statement)
+    public IssuePrediction ClassificationTexts(T? mainTitle)
     {
         _mlContext = new MLContext(seed: 0);
         DataViewSchema modelSchema;
         ITransformer model = _mlContext.Model.Load(_modelPath, out modelSchema);
-
         
-        UseModelWithSingleItem(_mlContext, model, statement);
+        var resultPrediction = UseModelWithSingleItem(_mlContext, model, mainTitle);
+        return resultPrediction;
     }
+
 }

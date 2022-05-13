@@ -7,4 +7,11 @@ public class MainTitle : BaseEntity
     
     public new string Prediction { get; set; }
     public new double Probability { get; set;  }
+
+    public MainTitle(string name, string prediction, double probability)
+    {
+        Name = name;
+        Prediction = prediction;
+        Probability = probability;
+    }
 }

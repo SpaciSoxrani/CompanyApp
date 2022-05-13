@@ -1,6 +1,9 @@
+using CompanyApp.Core;
+using CompanyApp.Core.Domain.Models;
+
 namespace MusicApp;
 
-public interface IClassificationService
+public interface IClassificationService<T> where T : BaseEntity
 {
-    void ClassificationTexts(string text);
+    IssuePrediction? ClassificationTexts(T modelNews);
 }
