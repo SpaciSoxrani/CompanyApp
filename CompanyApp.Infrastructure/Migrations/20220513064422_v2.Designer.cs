@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CompanyApp.Infrastructure.Migrations
 {
     [DbContext(typeof(CompanyAppContext))]
-    [Migration("20220408093834_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220513064422_v2")]
+    partial class v2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,12 +25,12 @@ namespace CompanyApp.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("MusicApp.Core.Domain.Models.EventPlace", b =>
+            modelBuilder.Entity("CompanyApp.Core.Domain.Models.EventPlace", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("text");
 
-                    b.Property<string>("PlaceName")
+                    b.Property<string>("Name")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -38,13 +38,31 @@ namespace CompanyApp.Infrastructure.Migrations
                     b.ToTable("EventPlace");
                 });
 
-            modelBuilder.Entity("MusicApp.Core.Domain.Models.MusicEvent", b =>
+            modelBuilder.Entity("CompanyApp.Core.Domain.Models.MainTitle", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<Guid?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("uuid");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Prediction")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<double>("Probability")
+                        .HasColumnType("double precision");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MainTitle");
+                });
+
+            modelBuilder.Entity("CompanyApp.Core.Domain.Models.MusicEvent", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
                     b.Property<string>("Genre")
                         .HasColumnType("text");
@@ -72,9 +90,9 @@ namespace CompanyApp.Infrastructure.Migrations
                     b.ToTable("MusEvent");
                 });
 
-            modelBuilder.Entity("MusicApp.Core.Domain.Models.MusicEvent", b =>
+            modelBuilder.Entity("CompanyApp.Core.Domain.Models.MusicEvent", b =>
                 {
-                    b.HasOne("MusicApp.Core.Domain.Models.EventPlace", "eventPlace")
+                    b.HasOne("CompanyApp.Core.Domain.Models.EventPlace", "eventPlace")
                         .WithMany()
                         .HasForeignKey("eventPlaceId")
                         .OnDelete(DeleteBehavior.Cascade)
