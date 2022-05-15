@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "przsGK8m9BLZQLkI/VkG+v2sYKzK8IFIDX5oqp4EyM8l0R8xPlq0F/zaE2e5NvP52kS+1gjUICkAINJvlnp10Q==",
+  "dgSpecHash": "sOTVMTXDQs5LdLlou9+05xrizkuYrYatWbyfaF28aCslSb0ej84il/1Sd2TVSn9sBs6MsGnFafLGfIvNkt9h1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Infrastructure\\CompanyApp.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\I553132\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\cronos\\0.7.1\\cronos.0.7.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\humanizer.core\\2.13.14\\humanizer.core.2.13.14.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
@@ -52,6 +53,7 @@
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\ncrontab\\3.3.1\\ncrontab.3.3.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\newtonsoft.json\\10.0.3\\newtonsoft.json.10.0.3.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\npgsql\\7.0.0-preview.2\\npgsql.7.0.0-preview.2.nupkg.sha512",

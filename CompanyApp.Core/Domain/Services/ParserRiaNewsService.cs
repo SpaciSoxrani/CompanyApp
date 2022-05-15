@@ -1,8 +1,8 @@
-using CompanyApp.Core;
 using CompanyApp.Core.Domain.Models;
+using MusicApp;
 using MusicApp.Infrastructure.Database.Repositories;
 
-namespace MusicApp;
+namespace CompanyApp.Core.Domain.Services;
 
 public sealed class ParserRiaNewsService : IParserRiaNewsService
 {
@@ -23,8 +23,8 @@ public sealed class ParserRiaNewsService : IParserRiaNewsService
         var riaNewsMainTitle = HtmlParser.HtmlAgilityPackParse();
         var existNewsMainTitle = riaNewsRepository.GetAll();
         
-        bool anyNull = Enumerable.Empty<string>().Any();
-        bool anyMainTitles = existNewsMainTitle.Any();
+        logger.LogInformation("About page visited at {DT}", 
+            DateTime.UtcNow.ToLongTimeString());
         
         foreach (var mainTitle in riaNewsMainTitle)
         {
@@ -32,7 +32,9 @@ public sealed class ParserRiaNewsService : IParserRiaNewsService
             {
                 var prediction=classificationService.ClassificationTexts(mainTitle);
                 var newMainTitle = new MainTitle(mainTitle.Name,
-                    Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative", prediction.Probability);
+                    Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative",
+                    prediction.Probability,
+                    DateTime.Now);
                 riaNewsRepository.Insert(newMainTitle);
 
             }

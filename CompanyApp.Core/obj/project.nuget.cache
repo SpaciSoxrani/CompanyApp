@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "i945jPAVnfSErvFXO7iqpqo06VzjaE4IqQrf5lDdmw+1GE2YGfG5rc6ELmpsCFxkuhj2mAcZYofszd4iGkeEtw==",
+  "dgSpecHash": "FqtvYQMyzQBQgjOO7rHaK57rZd/Qksw3wX4HOtEnMaSCTGf4MckAwX5M9rjsfcUFRo+kBrjkm/ofJiMZRcw/hA==",
   "success": true,
   "projectFilePath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Core\\CompanyApp.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\I553132\\.nuget\\packages\\cronos\\0.7.1\\cronos.0.7.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
@@ -14,6 +15,7 @@
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\ncrontab\\3.3.1\\ncrontab.3.3.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\newtonsoft.json\\10.0.3\\newtonsoft.json.10.0.3.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

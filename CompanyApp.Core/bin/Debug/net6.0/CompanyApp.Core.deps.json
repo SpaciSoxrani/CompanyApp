@@ -8,12 +8,22 @@
     ".NETCoreApp,Version=v6.0": {
       "CompanyApp.Core/1.0.0": {
         "dependencies": {
+          "Cronos": "0.7.1",
           "HtmlAgilityPack": "1.11.42",
           "Microsoft.ML": "1.7.1",
+          "NCrontab": "3.3.1",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
           "CompanyApp.Core.dll": {}
+        }
+      },
+      "Cronos/0.7.1": {
+        "runtime": {
+          "lib/netstandard2.0/Cronos.dll": {
+            "assemblyVersion": "0.7.1.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "HtmlAgilityPack/1.11.42": {
@@ -159,6 +169,14 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "NCrontab/3.3.1": {
+        "runtime": {
+          "lib/netstandard2.0/NCrontab.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
+          }
         }
       },
       "NETStandard.Library/1.6.1": {
@@ -990,6 +1008,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Cronos/0.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aa2DY3qGBnwX7/jW4c17PyRlIeAtc5nYTlAPekc0113jcbBuz9vQkQaQ9NG+TNGlAj4esFxh8OuKUv4vmAODbw==",
+      "path": "cronos/0.7.1",
+      "hashPath": "cronos.0.7.1.nupkg.sha512"
+    },
     "HtmlAgilityPack/1.11.42": {
       "type": "package",
       "serviceable": true,
@@ -1059,6 +1084,13 @@
       "sha512": "sha512-9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
       "path": "microsoft.win32.primitives/4.3.0",
       "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
+    },
+    "NCrontab/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G3tzcIIgsiyZyVbHNPyn5+adaM9UjeVNgjrRsvXU7wo2sMhpvpQrir29dcjIND53H/fuTdgg9nI3SfFFg7barA==",
+      "path": "ncrontab/3.3.1",
+      "hashPath": "ncrontab.3.3.1.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",
