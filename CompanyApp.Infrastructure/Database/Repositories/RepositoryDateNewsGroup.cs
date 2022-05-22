@@ -6,7 +6,7 @@ namespace CompanyApp.Infrastructure.Database.Repositories;
 
 public class RepositoryDateNewsGroup<T> : IRepositoryDateGroup<T> where T : NewsDateGroup
 {
-    protected readonly CompanyAppContext context;
+    private readonly CompanyAppContext context;
     private DbSet<T?> entities;
     string _errorMessage = string.Empty;
     

@@ -17,4 +17,5 @@ public sealed class CompanyAppContext: DbContext
     }
 
     public DbSet<MainTitle>  MainTitle { get; set; } = null!;
+    public DbSet<NewsDateGroup>  NewsDateGroups { get; set; } = null!;
 }

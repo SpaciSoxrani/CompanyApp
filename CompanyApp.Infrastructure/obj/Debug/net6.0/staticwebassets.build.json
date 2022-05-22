@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zb7mhYDimzd3rsz9MeKa+x2YqviTzkm9tCVPuM2BuG0=",
+  "Hash": "417LSwvxiGnyhi6rmvBoRljWBGPMv0ZD04UV0Q2rKFI=",
   "Source": "CompanyApp.Infrastructure",
   "BasePath": "_content/CompanyApp.Infrastructure",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "CompanyApp.Core",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     }
   ],

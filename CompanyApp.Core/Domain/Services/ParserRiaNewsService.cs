@@ -8,12 +8,16 @@ public sealed class ParserRiaNewsService : IParserRiaNewsService
 {
     private readonly IClassificationService<MainTitle> classificationService;
     private IRepository<MainTitle> riaNewsRepository;
+    private IRepositoryDateGroup<NewsDateGroup> groupsDateNewsRepo;
     private readonly ILogger<ParserRiaNewsService> logger;
     public ParserRiaNewsService(IClassificationService<MainTitle> classificationService,
-        IRepository<MainTitle> riaNewsRepository, ILogger<ParserRiaNewsService> logger)
+        IRepository<MainTitle> riaNewsRepository, 
+        IRepositoryDateGroup<NewsDateGroup> groupsDateNewsRepo, 
+        ILogger<ParserRiaNewsService> logger)
     {
         this.classificationService = classificationService;
         this.riaNewsRepository = riaNewsRepository;
+        this.groupsDateNewsRepo = groupsDateNewsRepo;
         this.logger = logger;
     }
     
@@ -22,6 +26,7 @@ public sealed class ParserRiaNewsService : IParserRiaNewsService
     {
         var riaNewsMainTitle = HtmlParser.HtmlAgilityPackParse();
         var existNewsMainTitle = riaNewsRepository.GetAll();
+        GroupNewsByDate groupNewsByDate = new GroupNewsByDate();
         
         logger.LogInformation("About page visited at {DT}", 
             DateTime.UtcNow.ToLongTimeString());
@@ -38,6 +43,16 @@ public sealed class ParserRiaNewsService : IParserRiaNewsService
                 riaNewsRepository.Insert(newMainTitle);
 
             }
+        }
+
+        List<MainTitle> newsList = riaNewsRepository.GetAll().ToList();
+        var groupsDateNews = groupNewsByDate.ReturnGroupsByDate(newsList);
+        foreach (var group in groupsDateNews)
+        {
+            groupsDateNewsRepo.Insert(new NewsDateGroup(
+                $"New group : {group.Key}",
+                group.Key,
+                group.Value));
         }
     }
 }
