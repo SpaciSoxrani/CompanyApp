@@ -9,6 +9,7 @@ public class MainTitle : BaseEntity
     public new double Probability { get; set;  }
     
     public new DateTime DateTime { get; set; }
+    
 
     public MainTitle(string name, string prediction, double probability, DateTime dateTime)
     {

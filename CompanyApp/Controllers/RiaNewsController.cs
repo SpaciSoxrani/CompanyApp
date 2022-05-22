@@ -42,14 +42,5 @@ namespace CompanyApp.Controllers
         [HttpGet]
         [Route("{id}")]
         public MainTitle GetById(string id) => riaNewsRepository.GetById(id);
-
-        // public void AddParsedMainTitles()
-        // {
-        //     var mainTitles = HtmlParser.HtmlAgilityPackParse();
-        //     foreach (var mainTitle in mainTitles)
-        //     {
-        //         riaNewsRepository.Insert(mainTitle);
-        //     }
-        // }
     }
 }

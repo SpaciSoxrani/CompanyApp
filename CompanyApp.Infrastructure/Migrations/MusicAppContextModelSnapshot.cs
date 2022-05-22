@@ -22,26 +22,6 @@ namespace CompanyApp.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("CompanyApp.Core.Domain.Models.EventPlace", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Prediction")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<double>("Probability")
-                        .HasColumnType("double precision");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EventPlace");
-                });
-
             modelBuilder.Entity("CompanyApp.Core.Domain.Models.MainTitle", b =>
                 {
                     b.Property<Guid?>("Id")
@@ -64,55 +44,6 @@ namespace CompanyApp.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MainTitle");
-                });
-
-            modelBuilder.Entity("CompanyApp.Core.Domain.Models.MusicEvent", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Genre")
-                        .HasColumnType("text");
-
-                    b.Property<bool>("IsComplete")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Prediction")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
-
-                    b.Property<double>("Probability")
-                        .HasColumnType("double precision");
-
-                    b.Property<DateTime>("ReleaseDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("eventPlaceId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("eventPlaceId");
-
-                    b.ToTable("MusEvent");
-                });
-
-            modelBuilder.Entity("CompanyApp.Core.Domain.Models.MusicEvent", b =>
-                {
-                    b.HasOne("CompanyApp.Core.Domain.Models.EventPlace", "eventPlace")
-                        .WithMany()
-                        .HasForeignKey("eventPlaceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("eventPlace");
                 });
 #pragma warning restore 612, 618
         }

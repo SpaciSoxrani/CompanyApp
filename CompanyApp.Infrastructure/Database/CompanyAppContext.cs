@@ -16,9 +16,5 @@ public sealed class CompanyAppContext: DbContext
             "Host=localhost;Port=5432;Database=NewsDb;Username=postgres;Password=123");
     }
 
-    public DbSet<MusicEvent> MusEvent { get; set; } = null!;
-    
-    public DbSet<EventPlace> EventPlace { get; set; } = null!;
-    
     public DbSet<MainTitle>  MainTitle { get; set; } = null!;
 }
