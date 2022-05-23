@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\Companyapp.Infrastructure\\CompanyApp.Infrastructure.csproj": {}
+    "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Infrastructure\\CompanyApp.Infrastructure.csproj": {}
   },
   "projects": {
     "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Core\\CompanyApp.Core.csproj": {
@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[1.11.42, )"
             },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0-preview.2.22153.1, )"
+            },
             "Microsoft.ML": {
               "target": "Package",
               "version": "[1.7.1, )"
@@ -81,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\Companyapp.Infrastructure\\CompanyApp.Infrastructure.csproj": {
+    "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Infrastructure\\CompanyApp.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\Companyapp.Infrastructure\\CompanyApp.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Infrastructure\\CompanyApp.Infrastructure.csproj",
         "projectName": "CompanyApp.Infrastructure",
-        "projectPath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\Companyapp.Infrastructure\\CompanyApp.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Infrastructure\\CompanyApp.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\I553132\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\Companyapp.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\I553132\\AppData\\Roaming\\NuGet\\NuGet.Config"

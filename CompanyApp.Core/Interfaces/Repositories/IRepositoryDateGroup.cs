@@ -2,12 +2,12 @@ using CompanyApp.Core.Domain.Models;
 
 namespace MusicApp.Infrastructure.Database.Repositories;
 
-public interface IRepositoryDateGroup<T> where T : BaseEntity
+public interface IRepositoryDateGroup
 {
-    IEnumerable<T?> GetAll();
-    T? GetById(Guid id);
-    T? GetByDate(DateTime dateTime);
-    void Insert(T? entity);
-    void Update(T entity);
+    IEnumerable<NewsDateGroup?> GetAll();
+    NewsDateGroup? GetById(Guid id);
+    NewsDateGroup? GetByDate(DateTime dateTime);
+    void Insert(NewsDateGroup? entity);
+    void Update(NewsDateGroup entity);
     void Delete(Guid id);
 }

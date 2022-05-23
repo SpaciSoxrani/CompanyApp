@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[1.11.42, )"
             },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0-preview.2.22153.1, )"
+            },
             "Microsoft.ML": {
               "target": "Package",
               "version": "[1.7.1, )"

@@ -34,6 +34,9 @@ namespace CompanyApp.Infrastructure.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("NewsDateGroupId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Prediction")
                         .IsRequired()
                         .HasColumnType("text");
@@ -43,7 +46,38 @@ namespace CompanyApp.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("NewsDateGroupId");
+
                     b.ToTable("MainTitle");
+                });
+
+            modelBuilder.Entity("CompanyApp.Core.Domain.Models.NewsDateGroup", b =>
+                {
+                    b.Property<Guid?>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateOnly>("DateTime")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NewsDateGroups");
+                });
+
+            modelBuilder.Entity("CompanyApp.Core.Domain.Models.MainTitle", b =>
+                {
+                    b.HasOne("CompanyApp.Core.Domain.Models.NewsDateGroup", null)
+                        .WithMany("News")
+                        .HasForeignKey("NewsDateGroupId");
+                });
+
+            modelBuilder.Entity("CompanyApp.Core.Domain.Models.NewsDateGroup", b =>
+                {
+                    b.Navigation("News");
                 });
 #pragma warning restore 612, 618
         }

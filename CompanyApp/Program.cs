@@ -1,5 +1,6 @@
 using System.Configuration;
 using System.Net;
+using System.Text.Json;
 using Microsoft.AspNetCore.Diagnostics;
 using CompanyApp.Controllers;
 using CompanyApp.Core;
@@ -20,16 +21,16 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<CompanyAppContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-builder.Services.AddScoped(typeof(IRepositoryDateGroup<>), typeof(RepositoryDateNewsGroup<>));
+builder.Services.AddScoped<IRepositoryDateGroup, RepositoryDateNewsGroup>();
 builder.Services.AddScoped(typeof(IParserRiaNewsService), typeof(ParserRiaNewsService));
 builder.Services.AddScoped(typeof(IClassificationService<>), typeof(TextClassificationService<>));
-builder.Services.AddScoped(typeof(IParserRiaNewsService), typeof(ParserRiaNewsService));
+//builder.Services.AddScoped(typeof(IParserRiaNewsService), typeof(ParserRiaNewsService));
+
 
 builder.Host
     .ConfigureServices(services =>
     {
         services.AddScoped<IMyScopedService, MyScopedService>();
-
         services.AddCronJob<ParserRiaNewsCronJob>(c =>
         {
             c.TimeZoneInfo = TimeZoneInfo.Local;

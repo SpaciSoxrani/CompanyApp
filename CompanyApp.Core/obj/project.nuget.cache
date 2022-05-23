@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "j5uu38rpVqj6qL1thEXfnU0b247jWFL6vrmN3yH2nZsl4JSIvv8TyeWRj9+E6akqw6uyBUfb5vhw5h0+Z2R2cA==",
+  "dgSpecHash": "SJXEKOVH62zn7sLxfItMJtEJuqAGoY00K3cHcwQUjL0uOlVQrUGv9+g9MUsjfSDK1Tkjph+Fzf+827wnEIxblg==",
   "success": true,
   "projectFilePath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Core\\CompanyApp.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\I553132\\.nuget\\packages\\cronos\\0.7.1\\cronos.0.7.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
+    "C:\\Users\\I553132\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0-preview.2.22153.1\\microsoft.entityframeworkcore.abstractions.7.0.0-preview.2.22153.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.ml\\1.7.1\\microsoft.ml.1.7.1.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\microsoft.ml.cpumath\\1.7.1\\microsoft.ml.cpumath.1.7.1.nupkg.sha512",

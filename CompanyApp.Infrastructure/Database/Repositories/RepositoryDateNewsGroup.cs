@@ -1,38 +1,39 @@
 using CompanyApp.Core.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using MusicApp.Infrastructure.Database.Repositories;
+using NuGet.Protocol.Core.Types;
 
 namespace CompanyApp.Infrastructure.Database.Repositories;
 
-public class RepositoryDateNewsGroup<T> : IRepositoryDateGroup<T> where T : NewsDateGroup
+public class RepositoryDateNewsGroup: IRepositoryDateGroup
 {
     private readonly CompanyAppContext context;
-    private DbSet<T?> entities;
+    private DbSet<NewsDateGroup?> entities;
     string _errorMessage = string.Empty;
     
     public RepositoryDateNewsGroup(CompanyAppContext context)
     {
         this.context = context;
-        entities = context.Set<T>();
+        entities = context.Set<NewsDateGroup>();
     }
 
     
-    public IEnumerable<T?> GetAll()
+    public IEnumerable<NewsDateGroup?> GetAll()
     {
         return entities.AsEnumerable();
     }
 
-    public T? GetById(Guid id)
+    public NewsDateGroup? GetById(Guid id)
     {
         return entities.SingleOrDefault(s => s.Id == id);
     }
 
-    public T? GetByDate(DateTime dateTime)
+    public NewsDateGroup? GetByDate(DateTime dateTime)
     {
         return entities.SingleOrDefault(s => s.DateTime == dateTime);
     }
 
-    public void Insert(T? entity)
+    public void Insert(NewsDateGroup? entity)
     {
         if (entity == null) throw new ArgumentNullException("entity");
 
@@ -40,7 +41,7 @@ public class RepositoryDateNewsGroup<T> : IRepositoryDateGroup<T> where T : News
         context.SaveChanges();
     }
 
-    public void Update(T entity)
+    public void Update(NewsDateGroup entity)
     {
         if (entity == null) throw new ArgumentNullException("entity");
         context.SaveChanges();
@@ -50,7 +51,7 @@ public class RepositoryDateNewsGroup<T> : IRepositoryDateGroup<T> where T : News
     {
         if (id == null) throw new ArgumentNullException("entity");
 
-        T? entity = entities.SingleOrDefault(s => s.Id == id);
+        NewsDateGroup? entity = entities.SingleOrDefault(s => s.Id == id);
         entities.Remove(entity);
         context.SaveChanges();
     }

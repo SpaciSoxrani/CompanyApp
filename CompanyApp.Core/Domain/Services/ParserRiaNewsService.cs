@@ -8,11 +8,11 @@ public sealed class ParserRiaNewsService : IParserRiaNewsService
 {
     private readonly IClassificationService<MainTitle> classificationService;
     private IRepository<MainTitle> riaNewsRepository;
-    private IRepositoryDateGroup<NewsDateGroup> groupsDateNewsRepo;
+    private IRepositoryDateGroup groupsDateNewsRepo;
     private readonly ILogger<ParserRiaNewsService> logger;
     public ParserRiaNewsService(IClassificationService<MainTitle> classificationService,
         IRepository<MainTitle> riaNewsRepository, 
-        IRepositoryDateGroup<NewsDateGroup> groupsDateNewsRepo, 
+        IRepositoryDateGroup groupsDateNewsRepo, 
         ILogger<ParserRiaNewsService> logger)
     {
         this.classificationService = classificationService;
@@ -51,7 +51,7 @@ public sealed class ParserRiaNewsService : IParserRiaNewsService
         {
             groupsDateNewsRepo.Insert(new NewsDateGroup(
                 $"New group : {group.Key}",
-                group.Key,
+                new DateTime(group.Key.Year, group.Key.Month, group.Key.Day),
                 group.Value));
         }
     }

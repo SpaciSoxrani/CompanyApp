@@ -1,14 +1,17 @@
 using CompanyApp.Core.Domain.Models;
+using CompanyApp.Infrastructure.Database;
 using Microsoft.AspNetCore.Mvc;
 using MusicApp.Infrastructure.Database.Repositories;
 
 namespace CompanyApp.Controllers;
 
+[Route("api/[controller]")]
 public class DateNewsGroupsController : ControllerBase
 {
-    private IRepositoryDateGroup<NewsDateGroup> newsDateGroupsRepository;
+    private readonly CompanyAppContext _context;
+    private IRepositoryDateGroup newsDateGroupsRepository;
 
-    public DateNewsGroupsController(IRepositoryDateGroup<NewsDateGroup> newsDateGroupsRepository)
+    public DateNewsGroupsController(IRepositoryDateGroup newsDateGroupsRepository)
     {
         this.newsDateGroupsRepository= newsDateGroupsRepository;
     }

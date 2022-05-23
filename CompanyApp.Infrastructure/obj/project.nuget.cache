@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GxL65Pechc64YzkY265l5ajXNt4AauYNMVu63THRaGUaE2R/uKWUchilwGBUoH4j98/XF4rcD0WMYWr+mU3HEg==",
+  "dgSpecHash": "H2mo/oX/LVFO6tfWQ+KITbGkFyWPWSotf2UkdCQiyFyMwRxhRafb4/EIfj4+Ji8A4EmlmHEPISBAHliv0PyzjA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\Companyapp.Infrastructure\\CompanyApp.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\I553132\\RiderProjects\\CleanArchitecture\\CompanyApp.Infrastructure\\CompanyApp.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\I553132\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\I553132\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",

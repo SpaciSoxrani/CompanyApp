@@ -4,10 +4,10 @@ namespace CompanyApp.Core.Domain.Services;
 
 public class GroupNewsByDate
 {
-    public Dictionary<DateTime, List<MainTitle>> ReturnGroupsByDate(List<MainTitle> news)
+    public Dictionary<DateOnly, List<MainTitle>> ReturnGroupsByDate(List<MainTitle> news)
     {
         //Dictionary<DateTime, NewsDateGroup> newsDateGroups = new Dictionary<DateTime, NewsDateGroup>();
-        Dictionary<DateTime, List<MainTitle>> newsDateGroupsDict = new Dictionary<DateTime, List<MainTitle>>();
+        Dictionary<DateOnly, List<MainTitle>> newsDateGroupsDict = new Dictionary<DateOnly, List<MainTitle>>();
         news.Sort(delegate(MainTitle title, MainTitle mainTitle)
         {
             if(title.DateTime == null && mainTitle.DateTime == null) return 0;
@@ -18,18 +18,19 @@ public class GroupNewsByDate
         
         foreach (var mailing in news)
         {
-            if (!newsDateGroupsDict.ContainsKey(mailing.DateTime))
+            DateOnly date = DateOnly.FromDateTime(mailing.DateTime);
+            if (!newsDateGroupsDict.ContainsKey(date))
             {
                 List<MainTitle> mailingsList = new List<MainTitle>();
                 mailingsList.Add(mailing);
-                newsDateGroupsDict.Add(mailing.DateTime, mailingsList);
+                newsDateGroupsDict.Add(date, mailingsList);
             }
             else
             {
-                var existMailingList = newsDateGroupsDict[mailing.DateTime];
+                var existMailingList = newsDateGroupsDict[date];
                 if (!existMailingList.Exists(x => x.Name == mailing.Name))
                 {
-                    newsDateGroupsDict[mailing.DateTime].Add(mailing);
+                    newsDateGroupsDict[date].Add(mailing);
                 }
                     
             }

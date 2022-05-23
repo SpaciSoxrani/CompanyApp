@@ -5,11 +5,23 @@ namespace CompanyApp.Infrastructure.Database;
 
 public sealed class CompanyAppContext: DbContext
 {
- public CompanyAppContext()
-    { 
-        Database.EnsureCreated();
-    }      
- 
+    // public CompanyAppContext()
+    // { 
+    //     Database.EnsureCreated();
+    // }      
+    
+    public CompanyAppContext()
+    {
+    }
+
+    public CompanyAppContext(DbContextOptions options) : base(options)
+    {
+    }
+    
+    // protected override void OnModelCreating(ModelBuilder modelBuilder)
+    // {
+    //     modelBuilder.Entity<NewsDateGroup>().HasData()
+    // }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql(

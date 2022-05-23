@@ -47,6 +47,15 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Abstractions/7.0.0-preview.2.22153.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
         "type": "package",
         "build": {
@@ -1777,6 +1786,20 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/7.0.0-preview.2.22153.1": {
+      "sha512": "fAHgboRgyr5aR3I6H05Eg616BLlZJoj9ct+/rHHg3xaMthJv5r9bL8djwRxHQ84xXNBReLArf6Pk7SnETv0/sg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.abstractions/7.0.0-preview.2.22153.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
+        "microsoft.entityframeworkcore.abstractions.7.0.0-preview.2.22153.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -5839,6 +5862,7 @@
     "net6.0": [
       "Cronos >= 0.7.1",
       "HtmlAgilityPack >= 1.11.42",
+      "Microsoft.EntityFrameworkCore.Abstractions >= 7.0.0-preview.2.22153.1",
       "Microsoft.ML >= 1.7.1",
       "NCrontab >= 3.3.1",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -5888,6 +5912,10 @@
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.11.42, )"
+          },
+          "Microsoft.EntityFrameworkCore.Abstractions": {
+            "target": "Package",
+            "version": "[7.0.0-preview.2.22153.1, )"
           },
           "Microsoft.ML": {
             "target": "Package",
