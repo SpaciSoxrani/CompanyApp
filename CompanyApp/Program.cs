@@ -34,7 +34,7 @@ builder.Host
         services.AddCronJob<ParserRiaNewsCronJob>(c =>
         {
             c.TimeZoneInfo = TimeZoneInfo.Local;
-            c.CronExpression = @"*/10 * * * *";
+            c.CronExpression = @"*/5 * * * *";
         });
     });
 

@@ -10,12 +10,12 @@ public sealed class NewsDateGroup : BaseEntity
     
     public List<MainTitle> News { get; set; }
 
-    public NewsDateGroup(string name, DateTime dateTime, List<MainTitle> news) : this(name, dateTime)
-    {
-        // Name = name;
-        // DateTime = dateTime;
-        News = news;
-    }
+     public NewsDateGroup(string name, DateTime dateTime, List<MainTitle> news) : this(name, dateTime)
+     {
+         // Name = name;
+         // DateTime = dateTime;
+         News = news;
+     }
 
     private NewsDateGroup(string name, DateTime dateTime)
     {

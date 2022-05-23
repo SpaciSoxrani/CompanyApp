@@ -9,9 +9,11 @@ public sealed class CompanyAppContext: DbContext
     // { 
     //     Database.EnsureCreated();
     // }      
-    
+    public DbSet<MainTitle>  MainTitle { get; set; } = null!;
+    public DbSet<NewsDateGroup>  NewsDateGroups { get; set; } = null!;
     public CompanyAppContext()
     {
+        
     }
 
     public CompanyAppContext(DbContextOptions options) : base(options)
@@ -20,14 +22,15 @@ public sealed class CompanyAppContext: DbContext
     
     // protected override void OnModelCreating(ModelBuilder modelBuilder)
     // {
-    //     modelBuilder.Entity<NewsDateGroup>().HasData()
+    //     // modelBuilder.Entity<MainTitle>()
+    //     //     .HasOne(p => p.NewsDateGroup)
+    //     //     .WithMany(b => b.News)
+    //     //     .HasForeignKey(p => p.GroupDateId);
     // }
+    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql(
             "Host=localhost;Port=5432;Database=NewsDb;Username=postgres;Password=123");
     }
-
-    public DbSet<MainTitle>  MainTitle { get; set; } = null!;
-    public DbSet<NewsDateGroup>  NewsDateGroups { get; set; } = null!;
 }

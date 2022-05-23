@@ -10,6 +10,9 @@ public class MainTitle : BaseEntity
     
     public new DateTime DateTime { get; set; }
     
+    //public new Guid GroupDateId { get; set; }
+    //public new Guid? NewsDateGroupId { get; set; }
+    //public new NewsDateGroup NewsDateGroup { get; set; }
 
     public MainTitle(string name, string prediction, double probability, DateTime dateTime)
     {
